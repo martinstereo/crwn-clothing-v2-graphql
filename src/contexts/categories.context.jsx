@@ -35,10 +35,10 @@ export const CategoriesProvider = ({ children }) => {
         return acc;
       }, {});
       setCategoriesMap(collectionsMap);
-    } else {
-      console.log(error);
     }
-  }, [data, error]);
+  }, [data]);
+
+  //if (error) return `Error! ${error.message}`;
 
   const value = { categoriesMap, loading };
   return (
